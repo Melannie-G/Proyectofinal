@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Proyecto de Melannie Garcia</title>
+	</head>
+<h1> Mini Farmacia </h1>
+	<body>
+		
+	<table style="width:100%">
+  <tr>
+    <th>Producto</th>
+    <th>Descripción</th> 
+    <th>Precio</th>
+  </tr>
+  <tr>
+    <td><img src="imagenes/omeprazol.jpg" width="200" height="200"> <br></td>
+    <td>Omeprazol: inhibe la bomba de protones (IBPS)y disminuye la producción de ácido al bloquear la enzima de la pared del estómago que se encarga de producir esta sustancia. Este efecto reviene las úlceras y tiene un resultado curativo sobre las úlceras existentes en el esófago, estómago y duodeno.</td>
+    <td><strong>Precio: $0.95</strong></td>
+  </tr>
+  <tr>
+    <td><img src="imagenes/aspirina.jpg" width="200" height="200"></td>
+    <td>Aspirina: también conocida como ácido acetil-salicílico (ASA), reduce las sustancias en el cuerpo que producen dolor, fiebre e inflamación</td>
+    <td> <strong>Precio: $9.95</strong></td>
+  </tr>
+  <tr>
+    <td><img src="imagenes/levitiroxina.jpg" width="200" height="200"></td>
+    <td>Lexotiroxina sódica: se encarga de sustituir una hormona que se suele producir en nuestra glándula tiroidea para regular la energía y el metabolismo del cuerpo. Es una versión artificial de la hormona tiroxina, responsable de aumentar la tasa metabólica de las células de todos los tejidos del organismo y ayuda a mantener la función cerebral, la absorción de los alimentos y la temperatura corporal, entre otros efectos.<td>
+    <td><strong>Precio: $8.47</strong></td>
+  </tr>
+  <tr>
+    <td><img src="imagenes/paracetamol.jpg" width="200" height="200"></td>
+    <td>Paracetamol: se usa para tratar diversas dolencias como fiebres, dolor de cabeza, dolores musculares, artritis, dolor de espalda o resfriados. </td>
+    <td><strong>Precio: $6.59</strong></td>
+  </tr>
+  <tr>
+    <td><img src="imagenes/simvastatina.jpg" width="200" height="200"> </td>
+    <td>Simvastatina: se emplea para reducir el colesterol y los triglicéridos (tipo de grasa) en la sangre.  </td>
+    <td><strong>Precio: $17.66</strong></td>
+  </tr>
+</table>
+
+<form>
+  <label for="fname">Primer nombre:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Primer apellido:</label><br>
+  <input type="text" id="lname" name="lname"><br>
+  <label for="edad">Edad:</label><br>
+  <input type="number" id="edad" name="edad"><br>
+  <label for="email">Ingrese su correo:</label> <br>
+  <input type="email" id="email" name="email"> <br>
+  <label for="ubicacion">Ubicación del delivery</label> <br>
+  <input type="text" id="ubicacion" name="ubicacion"> <br>
+
+  <input type="reset">
+</form>
+
+
+	<form>
+		<div>
+			<h1> Mini Farmacia</h1>
+			<h2> Añade un medicamento</h2>
+		</div>
+		<div>
+			<label for="categoria"></label>
+			<select name="categoria">
+				<option value=""> Seleccione categoria</option>
+				<option value="cajeta"> Cajeta</option>
+				<option value="tableta"> Tableta</option>
+			</select>
+		</div>
+		<div id="medicamento"></div>
+		<div>
+			<label for="medicamento"> Medicamento:</label>
+			<input type="text" name="medicamento" id="medicamento" class="input" required>
+		</div>
+		<div>
+			<label for="cantidad"> Cantidad:</label>
+			<input type="number" name="cantidad" id="cantidad" class="input" min=1 max=5 required>
+		</div>
+		<div>
+			<strong> Tamaño </strong> <br>
+			<input type="radio" name="size" id="small" value="pequeño" checked>
+			<label for="small"> Pequeño </label><br>
+			<input type="radio" name="size" id="medium" value="mediano">
+			<label for="medium"> Mediano </label><br>
+			<input type="radio" name="size" id="big" value="grande">
+			<label for="big"> Grande </label>
+		</div>
+		<div>
+			<strong>Medicamentos: </strong><br>
+			<input type="checkbox" name="omeprazol" id="omeprazol" value="omeprazol">
+			<label for="omeprazol"> Omeprazol </label><br>
+			<input type="checkbox" name="aspirina" id="aspirina" value="aspirina">
+			<label for="aspirina"> Aspirina </label><br>
+			<input type="checkbox" name="Lexotiroxina sodica" id="Lexotiroxina sodica" value="Lexotiroxina sodica">
+			<label for="Lexotiroxina sodica"> Lexotiroxina sodica </label><br>
+			<input type="checkbox" name="paracetamol" id="paracetamol" value="paracetamol">
+			<label for="paracetamol"> Paracetamol </label><br>
+			<input type="checkbox" name="simvastatina" id="simvastatina" value="simvastatina">
+			<label for="simvastatina"> Simvastatina </label><br>
+		</div>
+		<div>
+			<input type="submit" name="botonenviar" id="botonenviar" value="Enviar" class="button">
+			<input type="reset" value="borrar" class="button">
+		</div>
+		</form>
+		<div class="container" id="container">
+			
+			<input type="button" value="Completar Compra" id="Finish" class="button">
+		
+
+		</div>
+
+		<p> Nuestras redes sociales son @minifarmacia en instragram y Somosminifarmacia de facebook </p>
+		<h1>Factura</h1>
+<a href="mailto:diego1@gmail.com?
+subject= La factura final  &cc= diego2@gmail.com&bcc=diego3@gmail.com&body=Este 
+es el cuerpo">Enviar mail.</a>
+	</html>
+		
+	
+	<script type="text/javascript">
+	window.onload = Function(){
+		const selectElement = document.forms[0]. categoria;
+		const container = document.getElementById ("container");
+
+const container2 = document.getElementById("medicamento");
+
+const sendButton = document.getElementById("botonenviar");
+const finish = document.getElementById("Finish");
+
+finish.addEvenListener("click", completarCompra);
+sendButton.addEvenListener("click", validate);
+
+selectElement.addEvenListener("change", showProducts);
+
+product_list = [];
+var ids = 0;
+var elementos = document.forms[0]. elements;
+var validate(e){
+e.preventDefault();
+var patron /^\s+/;
+var opciones = ["omeprazol", "aspirina", "Lexotiroxina sodica", "paracetamol". "simvastatina"]
+
+let categoria = elementos[0];
+let medicamento = elementos[1].value.trim();
+var cantidad = elementos[2].value;
+
+if (categoria.selectedIndex == 0) {
+return false;
+}
+else if(opciones.includes(medicamento)){
+	console.log("Opción Invalida");
+	return false;
+}
+else if (medicamento == null || sabor.length == 0 || patron.test(medicamento) || /\d+/.test(medicamento)) {
+return false;
+
+}
+else if (cantidad == 0 || isNaN(cantidad) || cantidad <=0 || cantidad>99) {
+	return false;
+} else{
+	addProduct();
+}
+if (product_list.length > 0){
+finish.style.display = "block";
+
+
+}
+}
+
+
+function showProducts(){
+	if(selectElement.value == "cajeta") {
+		container2.textContent = "omeprazol (0.95), aspirina (9.95), Lexotiroxina sodica (8.47). paracetamol (6.59), simvastatina (17.66)"; }
+		else if (selectElement.value == "tableta") { container2.textContent = "omeprazol (0.95), aspirina (9.95), Lexotiroxina sodica (8.47). paracetamol (6.59), simvastatina (17.66)";
+		}
+}
+
+function completarCompra(){
+	var total = 0;
+	for (var i=0; i < product_list.length; i++) {
+		console.log(product_list[i]);
+		total+= product_list[i].getTotal();
+	}
+	alert("Monto total a pagar: "+ total);
+}
+
+ function addProduct() {
+ 	var id = ids;
+ 	let medicamento = elementos[1].value.trim();
+ 	var categoria = elementos[0].value;
+ 	var tamaño = document.forms[0].size.value;
+
+ 	var c1 = document.getElementById("omeprazol");
+ 	var c2 = document.getElementById("aspirina")
+ 	var c3 = document.getElementById("Lexotiroxina sodica")
+ 	var c4 = document.getElementById("paracetamol")
+ 	var c5 = document.getElementById("simvastatina")
+ 	
+ 	 var complementos = [c1,c2,c3,c4,c5]; 
+var producto = new Producto(id,categoria, medicamento, elementos[2].valure, tamaño, complementos);
+console.log(producto.id);
+ids+=1;
+
+const element = document.createElement("div");
+element.className = "card";
+element.innerHTML =  `<p><strong>${producto.tipo} de ${producto.medicamento} </strong><br> Cantidad: ${producto.cantidad} Precio: ${producto.precio} complementos: ${producto.extras} 5 c/u Total a Pagar: ${producto.getTotal()} </p> <input type="button" name="delete" class="button" value="Eliminar"> `;
+
+container.appendChild(element);
+product_list.push(producto);
+document.forms[0].reset();
+console.log(product_list );
+
+container.addEvenListener("click", function(e) {
+	if (e.target.name === "delete") {
+		deleteProduct(e.target, producto.id);
+	}
+})
+ }
+
+function deleteProduct(element,id){
+	if(element.name === "delete"){
+		element.parentElement.remover()
+		if (product_list.length >0){
+			product_list.splice(id, 1);
+			ids-=1;
+		}
+		console.log("Productos: "+ product_list.length);
+	}
+}
+
+
+
+
+function Producto(id,tipo, medicamento, cantidad, tamaño, Medicamentos){
+this.id = id;
+this.tipo = tipo;
+this.medicamento = medicamento;
+this.cantidad = cantidad;
+this.tamaño = tamaño;
+this.extras = "";
+
+console.log("ID: " + this.id);
+
+switch(medicamento){
+	case "aspirina";
+	this.precio = 9.95;
+	break;
+
+switch(medicamento){
+	case "Lexotiroxina sodica";
+	this.precio = 8.47;
+	break;
+
+switch(medicamento){
+	case "paracetamol";
+	this.precio = 6.59;
+	break;
+
+switch(medicamento){
+	case "simvastatina";
+	this.precio = 17.66;
+	break;
+
+switch(medicamento){
+	case "omeprazol";
+	this.precio = 0.95;
+	break;
+}
+
+this.subtotal = this.cantidad*this.precio;
+
+var envase = 0;
+if (this.tamaño == "pequeño") {
+	envase += 2.00
+}
+else if (this.tamaño == "mediano") {
+	envase += 3.00
+}
+else if (this.tamaño == "grande") {
+	envase += 4.00
+}
+
+var adicional = o;
+for (var i = 0; i<complementos.length; i++) {
+
+	if (complementos[i].checked == true) {
+		adicional += 4.00;
+
+
+		this.extras +=complementos[i].value+", ";
+	}
+}
+this.getTotal = function (){
+	var total = this.subtotal + envase + adicional;
+	return total;
+}
+
+}
+}
+var producto1;
+   producto1 = prompt('Ingrese precio del primer producto que quiere comprar', '');
+  var producto2= parseFloat(prompt("Ingrese precio del segundo producto que quiere comprar"));
+  var suma = producto1 + producto2;
+  var porcentajeI = 15/100;
+  var procentaje = suma * porcentajeI;
+
+  document.write("el monto a pagar es " + suma "y si es jubilado o jubilada es " + porcentaje)
+</script>
+<style type="text/css">
+	header {
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 20px;
+}
+	input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+input[type=text] {
+  border: none;
+  border-bottom: 2px solid red;
+  text-align: center;
+}
+input[type=text] {
+  background-color: #3CBC8D;
+  color: white;
+}
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+	
+	body {
+  background-color: lightblue;
+
+}
+p{
+	 color: blue
+}
+</style>
